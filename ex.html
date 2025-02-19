@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>js practice</title>
-    </head>
-    <body>
-        <h1>JavaScript</h1>
-        <script>
-            document.write(1+1);
-        </script>
-        <h1>html</h1>
-        1+1
-        <input type = "button" value = "player" onclick ="alert('playerrr')">
-        <input type = "text" onchange="alert('changed')">
-        <input type = "text" onkeydown="alert('key down!')">
-     </body>
-</html> 
+
+<head>
+    <title>js practice</title>
+</head>
+
+<body>
+    <h1 style="background-color: coral;">JavaScript</h1>
+    <script src = "colors.js">
+        document.write(1 + 1);
+    </script>
+    <h1 style="color:powderblue;">html</h1>
+    1+1
+    <input type="button" value="player" onclick="alert('playerrr')">
+    <input type="text" onchange="alert('changed')">
+    <input type="text" onkeydown="alert('key down!')">
+    <div style="font-weight:bold">🚀 결론</div>
+    🚨 <span style="font-weight: bold">BOLD</span> 는 p 내부에 넣을 수 없음!
+    ✔ 줄바꿈하려면 p 태그를 따로 사용하거나 div 를 밖으로 빼기
+    ✔ 줄바꿈 없이 강조만 하고 싶으면 span 사용
+
+    이제 정상적으로 줄바꿈이 될 거예요! 🚀😃
+    <br>
+    <script>
+        var coworkers = {
+            "progmer": "keen",
+            "designer": "mong"
+        };
+        coworkers.bookkeeper = "duru";
+        coworkers["data scientist"] = "DARA";
+     
+        coworkers.showAll = function(){
+            for(var key in this){
+                document.write(key + ": " + this[key] + "<br>");
+            }
+        }
+        coworkers.showAll();
+    </script>
+</body>
+
+</html>
