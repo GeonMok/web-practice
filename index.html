@@ -13,13 +13,24 @@
         a:visited {
             color:gray;
         }
-        a:current {
-            background-color: antiquewhite;
-            color : red;
+        body{
+            margin:0;
+        }
+        ol{
+            border-right:1px solid gray;
+            width:45px;
+            margin :0;
         }
         h1 {
             text-align: center;
             font-size : 350%; 
+            border-bottom: 1px solid gray;
+            margin:2px;
+            padding:20px;
+        }
+        #grid {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
         }
     </style>
 </head>
@@ -32,27 +43,30 @@
     <input id="night_day" type="button" value="night" onclick="
         nightdayHandler(this);
         ">
-    <ol>
-        <li><a href="https://en.wikipedia.org/wiki/Violin" target="_blank" title="violin wiki"> violin</a></li>
-        <li><a href="va.html">viola</a></li>
-        <li><a href="vc.html">cello</a></li>
-        <li><a href="cb.html">bass</a></li>
-    </ol>
-    <h2>AMAGO_history</h2>
-    <p>
-        Baroque and classical eras
-        In the Baroque era, the size and composition of an orchestra were not standardised. There were large differences
-        in size, instrumentation and playing styles—and therefore in orchestral soundscapes and palettes — between the
-        various European regions. The Baroque orchestra ranged from smaller orchestras (or ensembles) with one player
-        per part, to larger-scale orchestras with many players per part. Examples of the smaller variety were Bach's
-        orchestras, for example in Koethen, where he had access to an ensemble of up to 18 players. Examples of
-        large-scale Baroque orchestras would include Corelli's orchestra in Rome which ranged between 35 and 80 players
-        for day-to-day performances, being enlarged to 150 players for special occasions.[5]
-
-        In the classical era, the orchestra became more standardized with a small to medium-sized string section and a
-        core wind section consisting of pairs of oboes, flutes, bassoons and horns, sometimes supplemented by percussion
-        and pairs of clarinets and trumpets.
-    </p>
+    <span id = "grid">
+        <ol>
+            <li><a href="https://en.wikipedia.org/wiki/Violin" target="_blank" title="violin wiki"> violin</a></li>
+            <li><a href="va.html">viola</a></li>
+            <li><a href="vc.html">cello</a></li>
+            <li><a href="cb.html">bass</a></li>
+        </ol>
+    </span>
+    <span id = "grid">
+        <h2>AMAGO_history</h2>
+        <p>
+            Baroque and classical eras
+            In the Baroque era, the size and composition of an orchestra were not standardised. There were large differences
+            in size, instrumentation and playing styles—and therefore in orchestral soundscapes and palettes — between the
+            various European regions. The Baroque orchestra ranged from smaller orchestras (or ensembles) with one player
+            per part, to larger-scale orchestras with many players per part. Examples of the smaller variety were Bach's
+            orchestras, for example in Koethen, where he had access to an ensemble of up to 18 players. Examples of
+            large-scale Baroque orchestras would include Corelli's orchestra in Rome which ranged between 35 and 80 players
+            for day-to-day performances, being enlarged to 150 players for special occasions.[5]
+            In the classical era, the orchestra became more standardized with a small to medium-sized string section and a
+            core wind section consisting of pairs of oboes, flutes, bassoons and horns, sometimes supplemented by percussion
+            and pairs of clarinets and trumpets.
+        </p>
+    </span>
     <input type="button" value="night" onclick="
         if (this.value === 'night'){
             document.querySelector('body').style.backgroundColor = 'black';
